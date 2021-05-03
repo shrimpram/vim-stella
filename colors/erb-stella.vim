@@ -58,9 +58,9 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi Directory ctermbg=0 ctermfg=5 cterm=NONE guibg=#2B213C guifg=#A598BB gui=NONE
     hi MatchParen ctermbg=0 ctermfg=5 cterm=NONE guibg=#2B213C guifg=#A598BB gui=NONE
     hi SpellBad ctermbg=0 ctermfg=5 cterm=NONE guibg=#2B213C guifg=#A598BB gui=NONE guisp=#BBB998
-    hi SpellCap ctermbg=0 ctermfg=5 cterm=NONE guibg=#2B213C guifg=#A598BB gui=NONE guisp=#bb9e98
+    hi SpellCap ctermbg=0 ctermfg=5 cterm=NONE guibg=#2B213C guifg=#A598BB gui=NONE guisp=#BB9E98
     hi SpellLocal ctermbg=0 ctermfg=5 cterm=NONE guibg=#2B213C guifg=#A598BB gui=NONE guisp=#BBB098
-    hi SpellRare ctermbg=0 ctermfg=5 cterm=NONE guibg=#2B213C guifg=#A598BB gui=NONE guisp=#bb98ae
+    hi SpellRare ctermbg=0 ctermfg=5 cterm=NONE guibg=#2B213C guifg=#A598BB gui=NONE guisp=#BB98AE
     hi ColorColumn ctermbg=0 ctermfg=5 cterm=NONE guibg=#2B213C guifg=#A598BB gui=NONE
     hi SignColumn ctermbg=0 ctermfg=5 cterm=NONE guibg=#2B213C guifg=#A598BB gui=NONE
     hi ErrorMsg ctermbg=0 ctermfg=5 cterm=NONE guibg=#2B213C guifg=#A598BB gui=NONE
@@ -162,12 +162,12 @@ let g:terminal_ansi_colors = [
         \ '#FCEEFF',
         \ '#BBB998',
         \ '#BBB098',
-        \ '#bb9e98',
-        \ '#bb98ae',
-        \ '#98a1bb',
-        \ '#7962a1',
-        \ '#b698bb',
-        \ '#aebb98',
+        \ '#BB9E98',
+        \ '#BB98AE',
+        \ '#98A1BB',
+        \ '#7962A1',
+        \ '#B698BB',
+        \ '#AEBB98',
         \ ]
 
 " Generated with RNB (https://github.com/romainl/vim-rnb)
