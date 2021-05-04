@@ -54,7 +54,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi DiffDelete ctermbg=1 ctermfg=9 cterm=NONE guibg=#362C48 guifg=#B2CA89 gui=NONE
     hi DiffText ctermbg=1 ctermfg=9 cterm=NONE guibg=#362C48 guifg=#B2CA89 gui=NONE
     hi IncSearch ctermbg=8 ctermfg=1 cterm=NONE guibg=#BBA598 guifg=#362C48 gui=NONE
-    hi Search ctermbg=0 ctermfg=5 cterm=underline guibg=#2B213C guifg=#A598BB gui=underline
+    hi Search ctermbg=8 ctermfg=1 cterm=NONE guibg=#BBA598 guifg=#362C48 gui=NONE
     hi Directory ctermbg=NONE ctermfg=5 cterm=NONE guibg=NONE guifg=#A598BB gui=NONE
     hi MatchParen ctermbg=NONE ctermfg=9 cterm=NONE guibg=NONE guifg=#B2CA89 gui=NONE
     hi SpellBad ctermbg=NONE ctermfg=10 cterm=underline guibg=NONE guifg=#BB989C gui=underline guisp=#BB989C
@@ -120,7 +120,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi DiffDelete ctermbg=base01 ctermfg=base09 cterm=NONE
     hi DiffText ctermbg=base01 ctermfg=base09 cterm=NONE
     hi IncSearch ctermbg=base08 ctermfg=base01 cterm=NONE
-    hi Search ctermbg=base00 ctermfg=base05 cterm=underline
+    hi Search ctermbg=base08 ctermfg=base01 cterm=NONE
     hi Directory ctermbg=NONE ctermfg=base05 cterm=NONE
     hi MatchParen ctermbg=NONE ctermfg=base09 cterm=NONE
     hi SpellBad ctermbg=NONE ctermfg=base0A cterm=underline
