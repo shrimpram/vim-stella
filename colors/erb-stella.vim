@@ -21,7 +21,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi Identifier ctermbg=NONE ctermfg=8 cterm=NONE guibg=NONE guifg=#BBA598 gui=NONE
     hi Ignore ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=NONE gui=NONE
     hi PreProc ctermbg=NONE ctermfg=10 cterm=NONE guibg=NONE guifg=#BB989C gui=NONE
-    hi Special ctermbg=NONE ctermfg=8 cterm=NONE guibg=NONE guifg=#BBA598 gui=NONE
+    hi Special ctermbg=NONE ctermfg=5 cterm=NONE guibg=NONE guifg=#A598BB gui=NONE
     hi Statement ctermbg=NONE ctermfg=8 cterm=NONE guibg=NONE guifg=#BBA598 gui=NONE
     hi String ctermbg=NONE ctermfg=11 cterm=NONE guibg=NONE guifg=#9BBBCC gui=NONE
     hi Todo ctermbg=1 ctermfg=10 cterm=NONE guibg=#362C48 guifg=#BB989C gui=NONE
@@ -87,7 +87,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi Identifier ctermbg=NONE ctermfg=base08 cterm=NONE
     hi Ignore ctermbg=NONE ctermfg=NONE cterm=NONE
     hi PreProc ctermbg=NONE ctermfg=base0A cterm=NONE
-    hi Special ctermbg=NONE ctermfg=base08 cterm=NONE
+    hi Special ctermbg=NONE ctermfg=base05 cterm=NONE
     hi Statement ctermbg=NONE ctermfg=base08 cterm=NONE
     hi String ctermbg=NONE ctermfg=base0B cterm=NONE
     hi Todo ctermbg=base01 ctermfg=base0A cterm=NONE
