@@ -1,327 +1,173 @@
-" Base16 Stella (https://github.com/chriskempson/base16)
-" Scheme: Shrimpram
+" Stella.vim -- Vim color scheme.
+" Author:      Shreeram Modi (Shrimpram) (shreerammodi10@gmail.com)
+" Webpage:     https://github.com/shrimpram/stella
+" Description: A regal purple theme based on my dog Stella
+" Last Change: 2021-05-13
 
-" This enables the coresponding base16-shell script to run so that
-" :colorscheme works in terminals supported by base16-shell scripts
-" User must set this variable in .vimrc
-"   let g:base16_shell_path=base16-builder/output/shell/
-if !has('gui_running')
-  if exists("g:base16_shell_path")
-    execute "silent !/bin/sh ".g:base16_shell_path."/base16-stella.".&background.".sh"
-  endif
-endif
-
-" GUI color definitions
-let s:gui00 = "2B213C"
-let s:gui01 = "362C48"
-let s:gui02 = "716585"
-let s:gui03 = "7E7292"
-let s:gui04 = "988BAD"
-let s:gui05 = "A598BB"
-let s:gui06 = "F1E2FF"
-let s:gui07 = "FCEEFF"
-let s:gui08 = "BAAD84"
-let s:gui09 = "9DBA84"
-let s:gui0A = "BA9184"
-let s:gui0B = "8DBAAF"
-let s:gui0C = "A49FD1"
-let s:gui0D = "8865C6"
-let s:gui0E = "BF9FD1"
-let s:gui0F = "BAB884"
-
-" Terminal color definitions
-let s:cterm00 = "00"
-let s:cterm03 = "08"
-let s:cterm05 = "07"
-let s:cterm07 = "15"
-let s:cterm08 = "01"
-let s:cterm0A = "03"
-let s:cterm0B = "02"
-let s:cterm0C = "06"
-let s:cterm0D = "04"
-let s:cterm0E = "05"
-if exists('base16colorspace') && base16colorspace == "256"
-  let s:cterm01 = "18"
-  let s:cterm02 = "19"
-  let s:cterm04 = "20"
-  let s:cterm06 = "21"
-  let s:cterm09 = "16"
-  let s:cterm0F = "17"
-else
-  let s:cterm01 = "10"
-  let s:cterm02 = "11"
-  let s:cterm04 = "12"
-  let s:cterm06 = "13"
-  let s:cterm09 = "09"
-  let s:cterm0F = "14"
-endif
-
-" Theme setup
 hi clear
-syntax reset
-let g:colors_name = "base16-stella"
 
-" Highlighting function
-fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
-  if a:guifg != ""
-    exec "hi " . a:group . " guifg=#" . s:gui(a:guifg)
-  endif
-  if a:guibg != ""
-    exec "hi " . a:group . " guibg=#" . s:gui(a:guibg)
-  endif
-  if a:ctermfg != ""
-    exec "hi " . a:group . " ctermfg=" . s:cterm(a:ctermfg)
-  endif
-  if a:ctermbg != ""
-    exec "hi " . a:group . " ctermbg=" . s:cterm(a:ctermbg)
-  endif
-  if a:attr != ""
-    exec "hi " . a:group . " gui=" . a:attr . " cterm=" . a:attr
-  endif
-  if a:guisp != ""
-    exec "hi " . a:group . " guisp=#" . a:guisp
-  endif
-endfun
+if exists("syntax_on")
+  syntax reset
+endif
 
-" Return GUI color for light/dark variants
-fun s:gui(color)
-  if &background == "dark"
-    return a:color
-  endif
+let colors_name = "stella"
 
-  if a:color == s:gui00
-    return s:gui07
-  elseif a:color == s:gui01
-    return s:gui06
-  elseif a:color == s:gui02
-    return s:gui05
-  elseif a:color == s:gui03
-    return s:gui04
-  elseif a:color == s:gui04
-    return s:gui03
-  elseif a:color == s:gui05
-    return s:gui02
-  elseif a:color == s:gui06
-    return s:gui01
-  elseif a:color == s:gui07
-    return s:gui00
-  endif
+if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
+    hi Normal ctermbg=0 ctermfg=5 cterm=NONE guibg=#2B213C guifg=#A598BB gui=NONE
+    hi NonText ctermbg=NONE ctermfg=3 cterm=NONE guibg=NONE guifg=#7E7292 gui=NONE
+    hi Comment ctermbg=NONE ctermfg=2 cterm=italic guibg=NONE guifg=#716585 gui=italic
+    hi Constant ctermbg=NONE ctermfg=8 cterm=NONE guibg=NONE guifg=#BAAD84 gui=NONE
+    hi Error ctermbg=NONE ctermfg=8 cterm=NONE guibg=NONE guifg=#BAAD84 gui=NONE
+    hi Identifier ctermbg=NONE ctermfg=8 cterm=NONE guibg=NONE guifg=#BAAD84 gui=NONE
+    hi Ignore ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=NONE gui=NONE
+    hi PreProc ctermbg=NONE ctermfg=10 cterm=NONE guibg=NONE guifg=#BA9184 gui=NONE
+    hi Special ctermbg=NONE ctermfg=5 cterm=NONE guibg=NONE guifg=#A598BB gui=NONE
+    hi Statement ctermbg=NONE ctermfg=8 cterm=NONE guibg=NONE guifg=#BAAD84 gui=NONE
+    hi String ctermbg=NONE ctermfg=11 cterm=NONE guibg=NONE guifg=#8DBAAF gui=NONE
+    hi Todo ctermbg=1 ctermfg=10 cterm=NONE guibg=#362C48 guifg=#BA9184 gui=NONE
+    hi Type ctermbg=NONE ctermfg=10 cterm=NONE guibg=NONE guifg=#BA9184 gui=NONE
+    hi Underlined ctermbg=NONE ctermfg=5 cterm=underline guibg=NONE guifg=#A598BB gui=underline
+    hi StatusLine ctermbg=2 ctermfg=4 cterm=NONE guibg=#716585 guifg=#988BAD gui=NONE
+    hi StatusLineNC ctermbg=1 ctermfg=3 cterm=NONE guibg=#362C48 guifg=#7E7292 gui=NONE
+    hi VertSplit ctermbg=2 ctermfg=2 cterm=NONE guibg=#716585 guifg=#716585 gui=NONE
+    hi TabLine ctermbg=1 ctermfg=3 cterm=NONE guibg=#362C48 guifg=#7E7292 gui=NONE
+    hi TabLineFill ctermbg=1 ctermfg=3 cterm=NONE guibg=#362C48 guifg=#7E7292 gui=NONE
+    hi TabLineSel ctermbg=1 ctermfg=11 cterm=NONE guibg=#362C48 guifg=#8DBAAF gui=NONE
+    hi Title ctermbg=NONE ctermfg=13 cterm=NONE guibg=NONE guifg=#8865C6 gui=NONE
+    hi CursorLine ctermbg=1 ctermfg=NONE cterm=NONE guibg=#362C48 guifg=NONE gui=NONE
+    hi LineNr ctermbg=NONE ctermfg=5 cterm=NONE guibg=NONE guifg=#A598BB gui=NONE
+    hi CursorLineNr ctermbg=1 ctermfg=6 cterm=NONE guibg=#362C48 guifg=#F1E2FF gui=NONE
+    hi helpLeadBlank ctermbg=NONE ctermfg=5 cterm=NONE guibg=NONE guifg=#A598BB gui=NONE
+    hi helpNormal ctermbg=NONE ctermfg=5 cterm=NONE guibg=NONE guifg=#A598BB gui=NONE
+    hi Visual ctermbg=3 ctermfg=NONE cterm=NONE guibg=#7E7292 guifg=NONE gui=NONE
+    hi VisualNOS ctermbg=NONE ctermfg=8 cterm=NONE guibg=NONE guifg=#BAAD84 gui=NONE
+    hi Pmenu ctermbg=1 ctermfg=4 cterm=NONE guibg=#362C48 guifg=#988BAD gui=NONE
+    hi PmenuSbar ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=NONE gui=NONE
+    hi PmenuSel ctermbg=4 ctermfg=1 cterm=NONE guibg=#988BAD guifg=#362C48 gui=NONE
+    hi PmenuThumb ctermbg=4 ctermfg=3 cterm=NONE guibg=#988BAD guifg=#7E7292 gui=NONE
+    hi FoldColumn ctermbg=1 ctermfg=12 cterm=NONE guibg=#362C48 guifg=#A49FD1 gui=NONE
+    hi Folded ctermbg=1 ctermfg=3 cterm=NONE guibg=#362C48 guifg=#7E7292 gui=NONE
+    hi WildMenu ctermbg=10 ctermfg=8 cterm=NONE guibg=#BA9184 guifg=#BAAD84 gui=NONE
+    hi SpecialKey ctermbg=NONE ctermfg=3 cterm=NONE guibg=NONE guifg=#7E7292 gui=NONE
+    hi DiffAdd ctermbg=1 ctermfg=11 cterm=NONE guibg=#362C48 guifg=#8DBAAF gui=NONE
+    hi DiffChange ctermbg=1 ctermfg=3 cterm=NONE guibg=#362C48 guifg=#7E7292 gui=NONE
+    hi DiffDelete ctermbg=1 ctermfg=8 cterm=NONE guibg=#362C48 guifg=#BAAD84 gui=NONE
+    hi DiffText ctermbg=1 ctermfg=13 cterm=NONE guibg=#362C48 guifg=#8865C6 gui=NONE
+    hi IncSearch ctermbg=9 ctermfg=1 cterm=NONE guibg=#9DBA84 guifg=#362C48 gui=NONE
+    hi Search ctermbg=8 ctermfg=1 cterm=NONE guibg=#BAAD84 guifg=#362C48 gui=NONE
+    hi Directory ctermbg=NONE ctermfg=13 cterm=NONE guibg=NONE guifg=#8865C6 gui=NONE
+    hi MatchParen ctermbg=NONE ctermfg=9 cterm=NONE guibg=NONE guifg=#9DBA84 gui=NONE
+    hi SpellBad ctermbg=NONE ctermfg=10 cterm=underline guibg=NONE guifg=#BA9184 gui=underline guisp=#BA9184
+    hi SpellCap ctermbg=NONE ctermfg=10 cterm=underline guibg=NONE guifg=#BA9184 gui=underline guisp=#BA9184
+    hi SpellLocal ctermbg=NONE ctermfg=10 cterm=underline guibg=NONE guifg=#BA9184 gui=underline guisp=#BA9184
+    hi SpellRare ctermbg=NONE ctermfg=10 cterm=underline guibg=NONE guifg=#BA9184 gui=underline guisp=#FCEEFF
+    hi ColorColumn ctermbg=2 ctermfg=NONE cterm=NONE guibg=#716585 guifg=NONE gui=NONE
+    hi SignColumn ctermbg=NONE ctermfg=6 cterm=NONE guibg=NONE guifg=#F1E2FF gui=NONE
+    hi ErrorMsg ctermbg=NONE ctermfg=8 cterm=NONE guibg=NONE guifg=#BAAD84 gui=NONE
+    hi ModeMsg ctermbg=NONE ctermfg=11 cterm=NONE guibg=NONE guifg=#8DBAAF gui=NONE
+    hi MoreMsg ctermbg=NONE ctermfg=11 cterm=NONE guibg=NONE guifg=#8DBAAF gui=NONE
+    hi Question ctermbg=NONE ctermfg=13 cterm=NONE guibg=NONE guifg=#8865C6 gui=NONE
+    hi Cursor ctermbg=NONE ctermfg=5 cterm=NONE guibg=NONE guifg=#A598BB gui=NONE
+    hi CursorColumn ctermbg=1 ctermfg=NONE cterm=NONE guibg=#362C48 guifg=NONE gui=NONE
+    hi QuickFixLine ctermbg=NONE ctermfg=5 cterm=NONE guibg=NONE guifg=#A598BB gui=NONE
+    hi Conceal ctermbg=NONE ctermfg=5 cterm=NONE guibg=NONE guifg=#A598BB gui=NONE
+    hi ToolbarLine ctermbg=NONE ctermfg=5 cterm=NONE guibg=NONE guifg=#A598BB gui=NONE
+    hi ToolbarButton ctermbg=NONE ctermfg=5 cterm=NONE guibg=NONE guifg=#A598BB gui=NONE
+    hi debugPC ctermbg=NONE ctermfg=8 cterm=NONE guibg=NONE guifg=#BAAD84 gui=NONE
+    hi debugBreakpoint ctermbg=NONE ctermfg=5 cterm=NONE guibg=NONE guifg=#A598BB gui=NONE
 
-  return a:color
-endfun
+elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
+    set t_Co=16
 
-" Return terminal color for light/dark variants
-fun s:cterm(color)
-  if &background == "dark"
-    return a:color
-  endif
+    hi Normal ctermbg=base00 ctermfg=base05 cterm=NONE
+    hi NonText ctermbg=NONE ctermfg=base03 cterm=NONE
+    hi Comment ctermbg=NONE ctermfg=base02 cterm=italic
+    hi Constant ctermbg=NONE ctermfg=base08 cterm=NONE
+    hi Error ctermbg=NONE ctermfg=base08 cterm=NONE
+    hi Identifier ctermbg=NONE ctermfg=base08 cterm=NONE
+    hi Ignore ctermbg=NONE ctermfg=NONE cterm=NONE
+    hi PreProc ctermbg=NONE ctermfg=base0A cterm=NONE
+    hi Special ctermbg=NONE ctermfg=base05 cterm=NONE
+    hi Statement ctermbg=NONE ctermfg=base08 cterm=NONE
+    hi String ctermbg=NONE ctermfg=base0B cterm=NONE
+    hi Todo ctermbg=base01 ctermfg=base0A cterm=NONE
+    hi Type ctermbg=NONE ctermfg=base0A cterm=NONE
+    hi Underlined ctermbg=NONE ctermfg=base05 cterm=underline
+    hi StatusLine ctermbg=base02 ctermfg=base04 cterm=NONE
+    hi StatusLineNC ctermbg=base01 ctermfg=base03 cterm=NONE
+    hi VertSplit ctermbg=base02 ctermfg=base02 cterm=NONE
+    hi TabLine ctermbg=base01 ctermfg=base03 cterm=NONE
+    hi TabLineFill ctermbg=base01 ctermfg=base03 cterm=NONE
+    hi TabLineSel ctermbg=base01 ctermfg=base0B cterm=NONE
+    hi Title ctermbg=NONE ctermfg=base0D cterm=NONE
+    hi CursorLine ctermbg=base01 ctermfg=NONE cterm=NONE
+    hi LineNr ctermbg=NONE ctermfg=base05 cterm=NONE
+    hi CursorLineNr ctermbg=base01 ctermfg=base06 cterm=NONE
+    hi helpLeadBlank ctermbg=NONE ctermfg=base05 cterm=NONE
+    hi helpNormal ctermbg=NONE ctermfg=base05 cterm=NONE
+    hi Visual ctermbg=base03 ctermfg=NONE cterm=NONE
+    hi VisualNOS ctermbg=NONE ctermfg=base08 cterm=NONE
+    hi Pmenu ctermbg=base01 ctermfg=base04 cterm=NONE
+    hi PmenuSbar ctermbg=NONE ctermfg=NONE cterm=NONE
+    hi PmenuSel ctermbg=base04 ctermfg=base01 cterm=NONE
+    hi PmenuThumb ctermbg=base04 ctermfg=base03 cterm=NONE
+    hi FoldColumn ctermbg=base01 ctermfg=base0C cterm=NONE
+    hi Folded ctermbg=base01 ctermfg=base03 cterm=NONE
+    hi WildMenu ctermbg=base0A ctermfg=base08 cterm=NONE
+    hi SpecialKey ctermbg=NONE ctermfg=base03 cterm=NONE
+    hi DiffAdd ctermbg=base01 ctermfg=base0B cterm=NONE
+    hi DiffChange ctermbg=base01 ctermfg=base03 cterm=NONE
+    hi DiffDelete ctermbg=base01 ctermfg=base08 cterm=NONE
+    hi DiffText ctermbg=base01 ctermfg=base0D cterm=NONE
+    hi IncSearch ctermbg=base09 ctermfg=base01 cterm=NONE
+    hi Search ctermbg=base08 ctermfg=base01 cterm=NONE
+    hi Directory ctermbg=NONE ctermfg=base0D cterm=NONE
+    hi MatchParen ctermbg=NONE ctermfg=base09 cterm=NONE
+    hi SpellBad ctermbg=NONE ctermfg=base0A cterm=underline
+    hi SpellCap ctermbg=NONE ctermfg=base0A cterm=underline
+    hi SpellLocal ctermbg=NONE ctermfg=base0A cterm=underline
+    hi SpellRare ctermbg=NONE ctermfg=base0A cterm=underline
+    hi ColorColumn ctermbg=base02 ctermfg=NONE cterm=NONE
+    hi SignColumn ctermbg=NONE ctermfg=base06 cterm=NONE
+    hi ErrorMsg ctermbg=NONE ctermfg=base08 cterm=NONE
+    hi ModeMsg ctermbg=NONE ctermfg=base0B cterm=NONE
+    hi MoreMsg ctermbg=NONE ctermfg=base0B cterm=NONE
+    hi Question ctermbg=NONE ctermfg=base0D cterm=NONE
+    hi Cursor ctermbg=NONE ctermfg=base05 cterm=NONE
+    hi CursorColumn ctermbg=base01 ctermfg=NONE cterm=NONE
+    hi QuickFixLine ctermbg=NONE ctermfg=base05 cterm=NONE
+    hi Conceal ctermbg=NONE ctermfg=base05 cterm=NONE
+    hi ToolbarLine ctermbg=NONE ctermfg=base05 cterm=NONE
+    hi ToolbarButton ctermbg=NONE ctermfg=base05 cterm=NONE
+    hi debugPC ctermbg=NONE ctermfg=base08 cterm=NONE
+    hi debugBreakpoint ctermbg=NONE ctermfg=base05 cterm=NONE
+endif
 
-  if a:color == s:cterm00
-    return s:cterm07
-  elseif a:color == s:cterm01
-    return s:cterm06
-  elseif a:color == s:cterm02
-    return s:cterm05
-  elseif a:color == s:cterm03
-    return s:cterm04
-  elseif a:color == s:cterm04
-    return s:cterm03
-  elseif a:color == s:cterm05
-    return s:cterm02
-  elseif a:color == s:cterm06
-    return s:cterm01
-  elseif a:color == s:cterm07
-    return s:cterm00
-  endif
+hi link EndOfBuffer NonText
+hi link Number Constant
+hi link StatusLineTerm StatusLine
+hi link StatusLineTermNC StatusLineNC
+hi link WarningMsg Error
+hi link CursorIM Cursor
+hi link Terminal Normal
 
-  return a:color
-endfun
+let g:terminal_ansi_colors = [
+        \ '#2B213C',
+        \ '#362C48',
+        \ '#716585',
+        \ '#7E7292',
+        \ '#988BAD',
+        \ '#A598BB',
+        \ '#F1E2FF',
+        \ '#FCEEFF',
+        \ '#BAAD84',
+        \ '#9DBA84',
+        \ '#BA9184',
+        \ '#8DBAAF',
+        \ '#A49FD1',
+        \ '#8865C6',
+        \ '#BF9FD1',
+        \ '#BAB884',
+        \ ]
 
-" Vim editor colors
-call <sid>hi("Bold",          "", "", "", "", "bold", "")
-call <sid>hi("Debug",         s:gui08, "", s:cterm08, "", "", "")
-call <sid>hi("Directory",     s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("Error",         s:gui00, s:gui08, s:cterm00, s:cterm08, "", "")
-call <sid>hi("ErrorMsg",      s:gui08, s:gui00, s:cterm08, s:cterm00, "", "")
-call <sid>hi("Exception",     s:gui08, "", s:cterm08, "", "", "")
-call <sid>hi("FoldColumn",    s:gui0C, s:gui01, s:cterm0C, s:cterm01, "", "")
-call <sid>hi("Folded",        s:gui03, s:gui01, s:cterm03, s:cterm01, "", "")
-call <sid>hi("IncSearch",     s:gui01, s:gui09, s:cterm01, s:cterm09, "none", "")
-call <sid>hi("Italic",        "", "", "", "", "none", "")
-call <sid>hi("Macro",         s:gui08, "", s:cterm08, "", "", "")
-call <sid>hi("MatchParen",    s:gui00, s:gui03, s:cterm00, s:cterm03,  "", "")
-call <sid>hi("ModeMsg",       s:gui0B, "", s:cterm0B, "", "", "")
-call <sid>hi("MoreMsg",       s:gui0B, "", s:cterm0B, "", "", "")
-call <sid>hi("Question",      s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("Search",        s:gui03, s:gui0A, s:cterm03, s:cterm0A,  "", "")
-call <sid>hi("SpecialKey",    s:gui03, "", s:cterm03, "", "", "")
-call <sid>hi("TooLong",       s:gui08, "", s:cterm08, "", "", "")
-call <sid>hi("Underlined",    s:gui08, "", s:cterm08, "", "", "")
-call <sid>hi("Visual",        "", s:gui02, "", s:cterm02, "", "")
-call <sid>hi("VisualNOS",     s:gui08, "", s:cterm08, "", "", "")
-call <sid>hi("WarningMsg",    s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("WildMenu",      s:gui08, s:gui0A, s:cterm08, "", "", "")
-call <sid>hi("Title",         s:gui0D, "", s:cterm0D, "", "none", "")
-call <sid>hi("Conceal",       s:gui0D, s:gui00, s:cterm0D, s:cterm00, "", "")
-call <sid>hi("Cursor",        s:gui00, s:gui05, s:cterm00, s:cterm05, "", "")
-call <sid>hi("NonText",       s:gui03, "", s:cterm03, "", "", "")
-call <sid>hi("Normal",        s:gui05, s:gui00, s:cterm05, s:cterm00, "", "")
-call <sid>hi("LineNr",        s:gui03, s:gui01, s:cterm03, s:cterm01, "", "")
-call <sid>hi("SignColumn",    s:gui03, s:gui01, s:cterm03, s:cterm01, "", "")
-call <sid>hi("StatusLine",    s:gui04, s:gui02, s:cterm04, s:cterm02, "none", "")
-call <sid>hi("StatusLineNC",  s:gui03, s:gui01, s:cterm03, s:cterm01, "none", "")
-call <sid>hi("VertSplit",     s:gui02, s:gui02, s:cterm02, s:cterm02, "none", "")
-call <sid>hi("ColorColumn",   "", s:gui01, "", s:cterm01, "none", "")
-call <sid>hi("CursorColumn",  "", s:gui01, "", s:cterm01, "none", "")
-call <sid>hi("CursorLine",    "", s:gui01, "", s:cterm01, "none", "")
-call <sid>hi("CursorLineNr",  s:gui03, s:gui01, s:cterm03, s:cterm01, "", "")
-call <sid>hi("PMenu",         s:gui04, s:gui01, s:cterm04, s:cterm01, "none", "")
-call <sid>hi("PMenuSel",      s:gui01, s:gui04, s:cterm01, s:cterm04, "", "")
-call <sid>hi("TabLine",       s:gui03, s:gui01, s:cterm03, s:cterm01, "none", "")
-call <sid>hi("TabLineFill",   s:gui03, s:gui01, s:cterm03, s:cterm01, "none", "")
-call <sid>hi("TabLineSel",    s:gui0B, s:gui01, s:cterm0B, s:cterm01, "none", "")
-
-" Standard syntax highlighting
-call <sid>hi("Boolean",      s:gui09, "", s:cterm09, "", "", "")
-call <sid>hi("Character",    s:gui08, "", s:cterm08, "", "", "")
-call <sid>hi("Comment",      s:gui03, "", s:cterm03, "", "", "")
-call <sid>hi("Conditional",  s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("Constant",     s:gui09, "", s:cterm09, "", "", "")
-call <sid>hi("Define",       s:gui0E, "", s:cterm0E, "", "none", "")
-call <sid>hi("Delimiter",    s:gui0F, "", s:cterm0F, "", "", "")
-call <sid>hi("Float",        s:gui09, "", s:cterm09, "", "", "")
-call <sid>hi("Function",     s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("Identifier",   s:gui08, "", s:cterm08, "", "none", "")
-call <sid>hi("Include",      s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("Keyword",      s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("Label",        s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("Number",       s:gui09, "", s:cterm09, "", "", "")
-call <sid>hi("Operator",     s:gui05, "", s:cterm05, "", "none", "")
-call <sid>hi("PreProc",      s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("Repeat",       s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("Special",      s:gui0C, "", s:cterm0C, "", "", "")
-call <sid>hi("SpecialChar",  s:gui0F, "", s:cterm0F, "", "", "")
-call <sid>hi("Statement",    s:gui08, "", s:cterm08, "", "", "")
-call <sid>hi("StorageClass", s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("String",       s:gui0B, "", s:cterm0B, "", "", "")
-call <sid>hi("Structure",    s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("Tag",          s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("Todo",         s:gui0A, s:gui01, s:cterm0A, s:cterm01, "", "")
-call <sid>hi("Type",         s:gui0A, "", s:cterm0A, "", "none", "")
-call <sid>hi("Typedef",      s:gui0A, "", s:cterm0A, "", "", "")
-
-" C highlighting
-call <sid>hi("cOperator",   s:gui0C, "", s:cterm0C, "", "", "")
-call <sid>hi("cPreCondit",  s:gui0E, "", s:cterm0E, "", "", "")
-
-" C# highlighting
-call <sid>hi("csClass",                 s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("csAttribute",             s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("csModifier",              s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("csType",                  s:gui08, "", s:cterm08, "", "", "")
-call <sid>hi("csUnspecifiedStatement",  s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("csContextualStatement",   s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("csNewDecleration",        s:gui08, "", s:cterm08, "", "", "")
-
-" CSS highlighting
-call <sid>hi("cssBraces",      s:gui05, "", s:cterm05, "", "", "")
-call <sid>hi("cssClassName",   s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("cssColor",       s:gui0C, "", s:cterm0C, "", "", "")
-
-" Diff highlighting
-call <sid>hi("DiffAdd",      s:gui0B, s:gui01,  s:cterm0B, s:cterm01, "", "")
-call <sid>hi("DiffChange",   s:gui03, s:gui01,  s:cterm03, s:cterm01, "", "")
-call <sid>hi("DiffDelete",   s:gui08, s:gui01,  s:cterm08, s:cterm01, "", "")
-call <sid>hi("DiffText",     s:gui0D, s:gui01,  s:cterm0D, s:cterm01, "", "")
-call <sid>hi("DiffAdded",    s:gui0B, s:gui00,  s:cterm0B, s:cterm00, "", "")
-call <sid>hi("DiffFile",     s:gui08, s:gui00,  s:cterm08, s:cterm00, "", "")
-call <sid>hi("DiffNewFile",  s:gui0B, s:gui00,  s:cterm0B, s:cterm00, "", "")
-call <sid>hi("DiffLine",     s:gui0D, s:gui00,  s:cterm0D, s:cterm00, "", "")
-call <sid>hi("DiffRemoved",  s:gui08, s:gui00,  s:cterm08, s:cterm00, "", "")
-
-" Git highlighting
-call <sid>hi("gitCommitOverflow",  s:gui08, "", s:cterm08, "", "", "")
-call <sid>hi("gitCommitSummary",   s:gui0B, "", s:cterm0B, "", "", "")
-
-" GitGutter highlighting
-call <sid>hi("GitGutterAdd",     s:gui0B, s:gui01, s:cterm0B, s:cterm01, "", "")
-call <sid>hi("GitGutterChange",  s:gui0D, s:gui01, s:cterm0D, s:cterm01, "", "")
-call <sid>hi("GitGutterDelete",  s:gui08, s:gui01, s:cterm08, s:cterm01, "", "")
-call <sid>hi("GitGutterChangeDelete",  s:gui0E, s:gui01, s:cterm0E, s:cterm01, "", "")
-
-" HTML highlighting
-call <sid>hi("htmlBold",    s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("htmlItalic",  s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("htmlEndTag",  s:gui05, "", s:cterm05, "", "", "")
-call <sid>hi("htmlTag",     s:gui05, "", s:cterm05, "", "", "")
-
-" JavaScript highlighting
-call <sid>hi("javaScript",        s:gui05, "", s:cterm05, "", "", "")
-call <sid>hi("javaScriptBraces",  s:gui05, "", s:cterm05, "", "", "")
-call <sid>hi("javaScriptNumber",  s:gui09, "", s:cterm09, "", "", "")
-
-" Mail highlighting
-call <sid>hi("mailQuoted1",  s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("mailQuoted2",  s:gui0B, "", s:cterm0B, "", "", "")
-call <sid>hi("mailQuoted3",  s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("mailQuoted4",  s:gui0C, "", s:cterm0C, "", "", "")
-call <sid>hi("mailQuoted5",  s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("mailQuoted6",  s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("mailURL",      s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("mailEmail",    s:gui0D, "", s:cterm0D, "", "", "")
-
-" Markdown highlighting
-call <sid>hi("markdownCode",              s:gui0B, "", s:cterm0B, "", "", "")
-call <sid>hi("markdownError",             s:gui05, s:gui00, s:cterm05, s:cterm00, "", "")
-call <sid>hi("markdownCodeBlock",         s:gui0B, "", s:cterm0B, "", "", "")
-call <sid>hi("markdownHeadingDelimiter",  s:gui0D, "", s:cterm0D, "", "", "")
-
-" NERDTree highlighting
-call <sid>hi("NERDTreeDirSlash",  s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("NERDTreeExecFile",  s:gui05, "", s:cterm05, "", "", "")
-
-" PHP highlighting
-call <sid>hi("phpMemberSelector",  s:gui05, "", s:cterm05, "", "", "")
-call <sid>hi("phpComparison",      s:gui05, "", s:cterm05, "", "", "")
-call <sid>hi("phpParent",          s:gui05, "", s:cterm05, "", "", "")
-
-" Python highlighting
-call <sid>hi("pythonOperator",  s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("pythonRepeat",    s:gui0E, "", s:cterm0E, "", "", "")
-
-" Ruby highlighting
-call <sid>hi("rubyAttribute",               s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("rubyConstant",                s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("rubyInterpolation",           s:gui0B, "", s:cterm0B, "", "", "")
-call <sid>hi("rubyInterpolationDelimiter",  s:gui0F, "", s:cterm0F, "", "", "")
-call <sid>hi("rubyRegexp",                  s:gui0C, "", s:cterm0C, "", "", "")
-call <sid>hi("rubySymbol",                  s:gui0B, "", s:cterm0B, "", "", "")
-call <sid>hi("rubyStringDelimiter",         s:gui0B, "", s:cterm0B, "", "", "")
-
-" SASS highlighting
-call <sid>hi("sassidChar",     s:gui08, "", s:cterm08, "", "", "")
-call <sid>hi("sassClassChar",  s:gui09, "", s:cterm09, "", "", "")
-call <sid>hi("sassInclude",    s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("sassMixing",     s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("sassMixinName",  s:gui0D, "", s:cterm0D, "", "", "")
-
-" Signify highlighting
-call <sid>hi("SignifySignAdd",     s:gui0B, s:gui01, s:cterm0B, s:cterm01, "", "")
-call <sid>hi("SignifySignChange",  s:gui0D, s:gui01, s:cterm0D, s:cterm01, "", "")
-call <sid>hi("SignifySignDelete",  s:gui08, s:gui01, s:cterm08, s:cterm01, "", "")
-
-" Spelling highlighting
-call <sid>hi("SpellBad",     "", s:gui00, "", s:cterm00, "undercurl", s:gui08)
-call <sid>hi("SpellLocal",   "", s:gui00, "", s:cterm00, "undercurl", s:gui0C)
-call <sid>hi("SpellCap",     "", s:gui00, "", s:cterm00, "undercurl", s:gui0D)
-call <sid>hi("SpellRare",    "", s:gui00, "", s:cterm00, "undercurl", s:gui0E)
-
-" Remove functions
-delf <sid>hi
-delf <sid>gui
-delf <sid>cterm
-
-" Remove color variables
-unlet s:gui00 s:gui01 s:gui02 s:gui03  s:gui04  s:gui05  s:gui06  s:gui07  s:gui08  s:gui09 s:gui0A  s:gui0B  s:gui0C  s:gui0D  s:gui0E  s:gui0F
-unlet s:cterm00 s:cterm01 s:cterm02 s:cterm03 s:cterm04 s:cterm05 s:cterm06 s:cterm07 s:cterm08 s:cterm09 s:cterm0A s:cterm0B s:cterm0C s:cterm0D s:cterm0E s:cterm0F
-
+" Generated with RNB (https://github.com/romainl/vim-rnb)
