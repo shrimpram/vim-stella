@@ -14,9 +14,33 @@
 
 
 ## Installation
-Use whichever (neo)vim plugin manager you prefer
-* [vim-plug](https://github.com/junegunn/vim-plug)
+Use whichever (neo)vim plugin manager you prefer, e.g.:
 
+[vim-plug](https://github.com/junegunn/vim-plug)
+```vim
+Plug 'shrimpram/vim-stella'
+
+...
+
+colorscheme stella
+```
+
+[dein](https://github.com/shougo/dein.vim)
+```vim
+call dein#add('shrimpram/vim-stella')
+
+...
+
+colorscheme stella
+```
+[packer](https://github.com/wbthomason/packer.nvim)
+```vim
+use 'shrimpram/vim-stella'
+
+...
+
+colorscheme stella
+```
 
 
 ## Credits
