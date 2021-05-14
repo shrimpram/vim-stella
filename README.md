@@ -23,3 +23,5 @@ Use whichever (neo)vim plugin manager you prefer
 * Typefaces used in banner:
     - [Chromaletter](http://www.losttype.com/font/?name=chromaletter)
     - [Libre Baskerville](https://fonts.google.com/specimen/Libre+Baskerville)
+* Typeface used in demo screenshots:
+    - Consolas
