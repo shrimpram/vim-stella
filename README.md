@@ -80,6 +80,7 @@ colorscheme stella
 
 
 ## Credits
+* Theme created using [vim-rnb](https://github.com/romainl/vim-rnb)
 * Typefaces used in banner:
     - [Chromaletter](http://www.losttype.com/font/?name=chromaletter)
     - [Libre Baskerville](https://fonts.google.com/specimen/Libre+Baskerville)
