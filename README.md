@@ -14,6 +14,10 @@
 
 
 ## Info
+
+<table>
+<tr><td>
+
 | Key    | Hex       | Sample                             |
 |--------|-----------|------------------------------------|
 | Base00 | `#2B213C` | ![](../images/base00.png?raw=true) |
@@ -24,6 +28,11 @@
 | Base05 | `#A598BB` | ![](../images/base05.png?raw=true) |
 | Base06 | `#F1E2FF` | ![](../images/base06.png?raw=true) |
 | Base07 | `#FCEEFF` | ![](../images/base07.png?raw=true) |
+
+</td><td>
+
+| Key    | Hex       | Sample                             |
+|--------|-----------|------------------------------------|
 | Base08 | `#BAAD84` | ![](../images/base08.png?raw=true) |
 | Base09 | `#9DBA84` | ![](../images/base09.png?raw=true) |
 | Base0A | `#BA9184` | ![](../images/base0A.png?raw=true) |
@@ -32,6 +41,12 @@
 | Base0D | `#8865C6` | ![](../images/base0D.png?raw=true) |
 | Base0E | `#BF9FD1` | ![](../images/base0E.png?raw=true) |
 | Base0F | `#BAB884` | ![](../images/base0F.png?raw=true) |
+
+</td></tr> </table>
+
+
+
+
 
 
 ## Installation
