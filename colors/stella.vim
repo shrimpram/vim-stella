@@ -1,8 +1,8 @@
 " Stella.vim -- Vim color scheme.
-" Author:      Shreeram Modi (Shrimpram) (shreerammodi10@gmail.com)
+" Author:      Shreeram Modi (Shrimpram) (shreerammodi10<at><gmail>)
 " Webpage:     https://github.com/shrimpram/stella
 " Description: A regal purple theme based on my dog Stella
-" Last Change: 2021-05-13
+" Last Change: 2021-05-26
 
 hi clear
 
@@ -49,10 +49,10 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi Folded ctermbg=1 ctermfg=3 cterm=NONE guibg=#362C48 guifg=#7E7292 gui=NONE
     hi WildMenu ctermbg=10 ctermfg=8 cterm=NONE guibg=#BA9184 guifg=#BAAD84 gui=NONE
     hi SpecialKey ctermbg=NONE ctermfg=3 cterm=NONE guibg=NONE guifg=#7E7292 gui=NONE
-    hi DiffAdd ctermbg=1 ctermfg=11 cterm=NONE guibg=#362C48 guifg=#8DBAAF gui=NONE
-    hi DiffChange ctermbg=1 ctermfg=3 cterm=NONE guibg=#362C48 guifg=#7E7292 gui=NONE
-    hi DiffDelete ctermbg=1 ctermfg=8 cterm=NONE guibg=#362C48 guifg=#BAAD84 gui=NONE
-    hi DiffText ctermbg=1 ctermfg=13 cterm=NONE guibg=#362C48 guifg=#8865C6 gui=NONE
+    hi DiffAdd ctermbg=NONE ctermfg=11 cterm=NONE guibg=NONE guifg=#8DBAAF gui=NONE
+    hi DiffChange ctermbg=NONE ctermfg=3 cterm=NONE guibg=NONE guifg=#7E7292 gui=NONE
+    hi DiffDelete ctermbg=NONE ctermfg=8 cterm=NONE guibg=NONE guifg=#BAAD84 gui=NONE
+    hi DiffText ctermbg=NONE ctermfg=13 cterm=NONE guibg=NONE guifg=#8865C6 gui=NONE
     hi IncSearch ctermbg=9 ctermfg=1 cterm=NONE guibg=#9DBA84 guifg=#362C48 gui=NONE
     hi Search ctermbg=8 ctermfg=1 cterm=NONE guibg=#BAAD84 guifg=#362C48 gui=NONE
     hi Directory ctermbg=NONE ctermfg=13 cterm=NONE guibg=NONE guifg=#8865C6 gui=NONE
@@ -115,10 +115,10 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi Folded ctermbg=base01 ctermfg=base03 cterm=NONE
     hi WildMenu ctermbg=base0A ctermfg=base08 cterm=NONE
     hi SpecialKey ctermbg=NONE ctermfg=base03 cterm=NONE
-    hi DiffAdd ctermbg=base01 ctermfg=base0B cterm=NONE
-    hi DiffChange ctermbg=base01 ctermfg=base03 cterm=NONE
-    hi DiffDelete ctermbg=base01 ctermfg=base08 cterm=NONE
-    hi DiffText ctermbg=base01 ctermfg=base0D cterm=NONE
+    hi DiffAdd ctermbg=NONE ctermfg=base0B cterm=NONE
+    hi DiffChange ctermbg=NONE ctermfg=base03 cterm=NONE
+    hi DiffDelete ctermbg=NONE ctermfg=base08 cterm=NONE
+    hi DiffText ctermbg=NONE ctermfg=base0D cterm=NONE
     hi IncSearch ctermbg=base09 ctermfg=base01 cterm=NONE
     hi Search ctermbg=base08 ctermfg=base01 cterm=NONE
     hi Directory ctermbg=NONE ctermfg=base0D cterm=NONE
