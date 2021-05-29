@@ -2,7 +2,7 @@
 " Author:      Shreeram Modi (Shrimpram) (shreerammodi10<at><gmail>)
 " Webpage:     https://github.com/shrimpram/stella
 " Description: A regal purple theme based on my dog Stella
-" Last Change: 2021-05-26
+" Last Change: 2021-05-29
 
 hi clear
 
@@ -42,9 +42,9 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi Visual ctermbg=3 ctermfg=NONE cterm=NONE guibg=#7E7292 guifg=NONE gui=NONE
     hi VisualNOS ctermbg=NONE ctermfg=8 cterm=NONE guibg=NONE guifg=#BAAD84 gui=NONE
     hi Pmenu ctermbg=1 ctermfg=4 cterm=NONE guibg=#362C48 guifg=#988BAD gui=NONE
-    hi PmenuSbar ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=NONE gui=NONE
+    hi PmenuSbar ctermbg=2 ctermfg=NONE cterm=NONE guibg=#716585 guifg=NONE gui=NONE
     hi PmenuSel ctermbg=4 ctermfg=1 cterm=NONE guibg=#988BAD guifg=#362C48 gui=NONE
-    hi PmenuThumb ctermbg=4 ctermfg=3 cterm=NONE guibg=#988BAD guifg=#7E7292 gui=NONE
+    hi PmenuThumb ctermbg=6 ctermfg=NONE cterm=NONE guibg=#F1E2FF guifg=NONE gui=NONE
     hi FoldColumn ctermbg=1 ctermfg=12 cterm=NONE guibg=#362C48 guifg=#A49FD1 gui=NONE
     hi Folded ctermbg=1 ctermfg=3 cterm=NONE guibg=#362C48 guifg=#7E7292 gui=NONE
     hi WildMenu ctermbg=10 ctermfg=8 cterm=NONE guibg=#BA9184 guifg=#BAAD84 gui=NONE
@@ -108,9 +108,9 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi Visual ctermbg=base03 ctermfg=NONE cterm=NONE
     hi VisualNOS ctermbg=NONE ctermfg=base08 cterm=NONE
     hi Pmenu ctermbg=base01 ctermfg=base04 cterm=NONE
-    hi PmenuSbar ctermbg=NONE ctermfg=NONE cterm=NONE
+    hi PmenuSbar ctermbg=base02 ctermfg=NONE cterm=NONE
     hi PmenuSel ctermbg=base04 ctermfg=base01 cterm=NONE
-    hi PmenuThumb ctermbg=base04 ctermfg=base03 cterm=NONE
+    hi PmenuThumb ctermbg=base06 ctermfg=NONE cterm=NONE
     hi FoldColumn ctermbg=base01 ctermfg=base0C cterm=NONE
     hi Folded ctermbg=base01 ctermfg=base03 cterm=NONE
     hi WildMenu ctermbg=base0A ctermfg=base08 cterm=NONE
