@@ -2,7 +2,7 @@
 " Author:      Shreeram Modi (Shrimpram) (shreerammodi10<at><gmail>)
 " Webpage:     https://github.com/shrimpram/stella
 " Description: A regal purple theme based on my dog Stella
-" Last Change: 2021-05-29
+" Last Change: 2021-05-30
 
 hi clear
 
@@ -75,6 +75,42 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi ToolbarButton ctermbg=NONE ctermfg=5 cterm=NONE guibg=NONE guifg=#A598BB gui=NONE
     hi debugPC ctermbg=NONE ctermfg=8 cterm=NONE guibg=NONE guifg=#BAAD84 gui=NONE
     hi debugBreakpoint ctermbg=NONE ctermfg=5 cterm=NONE guibg=NONE guifg=#A598BB gui=NONE
+    hi TSAnnotation ctermbg=NONE ctermfg=8 cterm=NONE guibg=NONE guifg=#BAAD84 gui=NONE
+    hi TSAttribute ctermbg=NONE ctermfg=11 cterm=NONE guibg=NONE guifg=#8DBAAF gui=NONE
+    hi TSBoolean ctermbg=NONE ctermfg=8 cterm=NONE guibg=NONE guifg=#BAAD84 gui=NONE
+    hi TSCharacter ctermbg=NONE ctermfg=9 cterm=NONE guibg=NONE guifg=#9DBA84 gui=NONE
+    hi TSComment ctermbg=NONE ctermfg=2 cterm=italic guibg=NONE guifg=#716585 gui=italic
+    hi TSConditional ctermbg=NONE ctermfg=13 cterm=NONE guibg=NONE guifg=#8865C6 gui=NONE
+    hi TSConstant ctermbg=NONE ctermfg=8 cterm=NONE guibg=NONE guifg=#BAAD84 gui=NONE
+    hi TSConstBuiltin ctermbg=NONE ctermfg=8 cterm=NONE guibg=NONE guifg=#BAAD84 gui=NONE
+    hi TSConstMacro ctermbg=NONE ctermfg=8 cterm=NONE guibg=NONE guifg=#BAAD84 gui=NONE
+    hi TSConstructor ctermbg=NONE ctermfg=12 cterm=NONE guibg=NONE guifg=#A49FD1 gui=NONE
+    hi TSException ctermbg=NONE ctermfg=12 cterm=NONE guibg=NONE guifg=#A49FD1 gui=NONE
+    hi TSField ctermbg=NONE ctermfg=12 cterm=NONE guibg=NONE guifg=#A49FD1 gui=NONE
+    hi TSFunction ctermbg=NONE ctermfg=10 cterm=NONE guibg=NONE guifg=#BA9184 gui=NONE
+    hi TSInclude ctermbg=NONE ctermfg=13 cterm=NONE guibg=NONE guifg=#8865C6 gui=NONE
+    hi TSKeyword ctermbg=NONE ctermfg=13 cterm=NONE guibg=NONE guifg=#8865C6 gui=NONE
+    hi TSLabel ctermbg=NONE ctermfg=8 cterm=NONE guibg=NONE guifg=#BAAD84 gui=NONE
+    hi TSMethod ctermbg=NONE ctermfg=14 cterm=NONE guibg=NONE guifg=#BF9FD1 gui=NONE
+    hi TSNamespace ctermbg=NONE ctermfg=7 cterm=NONE guibg=NONE guifg=#FCEEFF gui=NONE
+    hi TSOperator ctermbg=NONE ctermfg=10 cterm=NONE guibg=NONE guifg=#BA9184 gui=NONE
+    hi TSParameter ctermbg=NONE ctermfg=8 cterm=NONE guibg=NONE guifg=#BAAD84 gui=NONE
+    hi TSParameterReference ctermbg=NONE ctermfg=8 cterm=NONE guibg=NONE guifg=#BAAD84 gui=NONE
+    hi TSPunctDelimiter ctermbg=NONE ctermfg=14 cterm=NONE guibg=NONE guifg=#BF9FD1 gui=NONE
+    hi TSPunctBracket ctermbg=NONE ctermfg=5 cterm=NONE guibg=NONE guifg=#A598BB gui=NONE
+    hi TSPunctSpecial ctermbg=NONE ctermfg=6 cterm=NONE guibg=NONE guifg=#F1E2FF gui=NONE
+    hi TSString ctermbg=NONE ctermfg=9 cterm=NONE guibg=NONE guifg=#9DBA84 gui=NONE
+    hi TSStringEscape ctermbg=NONE ctermfg=8 cterm=NONE guibg=NONE guifg=#BAAD84 gui=NONE
+    hi TSTag ctermbg=NONE ctermfg=13 cterm=NONE guibg=NONE guifg=#8865C6 gui=NONE
+    hi TSTagDelimiter ctermbg=NONE ctermfg=3 cterm=NONE guibg=NONE guifg=#7E7292 gui=NONE
+    hi TSEmphasis ctermbg=NONE ctermfg=5 cterm=italic guibg=NONE guifg=#A598BB gui=italic
+    hi TSUnderline ctermbg=NONE ctermfg=5 cterm=underline guibg=NONE guifg=#A598BB gui=underline guisp=#A598BB
+    hi TSStrike ctermbg=NONE ctermfg=10 cterm=underline guibg=NONE guifg=#BA9184 gui=underline guisp=#BA9184
+    hi TSMath ctermbg=NONE ctermfg=10 cterm=NONE guibg=NONE guifg=#BA9184 gui=NONE
+    hi TSTextReference ctermbg=NONE ctermfg=8 cterm=NONE guibg=NONE guifg=#BAAD84 gui=NONE
+    hi TSEnvironmentName ctermbg=NONE ctermfg=12 cterm=NONE guibg=NONE guifg=#A49FD1 gui=NONE
+    hi TSVariable ctermbg=NONE ctermfg=12 cterm=NONE guibg=NONE guifg=#A49FD1 gui=NONE
+    hi TSVariableBuiltin ctermbg=NONE ctermfg=13 cterm=NONE guibg=NONE guifg=#8865C6 gui=NONE
 
 elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     set t_Co=16
@@ -141,6 +177,42 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi ToolbarButton ctermbg=NONE ctermfg=base05 cterm=NONE
     hi debugPC ctermbg=NONE ctermfg=base08 cterm=NONE
     hi debugBreakpoint ctermbg=NONE ctermfg=base05 cterm=NONE
+    hi TSAnnotation ctermbg=NONE ctermfg=base08 cterm=NONE
+    hi TSAttribute ctermbg=NONE ctermfg=base0B cterm=NONE
+    hi TSBoolean ctermbg=NONE ctermfg=base08 cterm=NONE
+    hi TSCharacter ctermbg=NONE ctermfg=base09 cterm=NONE
+    hi TSComment ctermbg=NONE ctermfg=base02 cterm=italic
+    hi TSConditional ctermbg=NONE ctermfg=base0D cterm=NONE
+    hi TSConstant ctermbg=NONE ctermfg=base08 cterm=NONE
+    hi TSConstBuiltin ctermbg=NONE ctermfg=base08 cterm=NONE
+    hi TSConstMacro ctermbg=NONE ctermfg=base08 cterm=NONE
+    hi TSConstructor ctermbg=NONE ctermfg=base0C cterm=NONE
+    hi TSException ctermbg=NONE ctermfg=base0C cterm=NONE
+    hi TSField ctermbg=NONE ctermfg=base0C cterm=NONE
+    hi TSFunction ctermbg=NONE ctermfg=base0A cterm=NONE
+    hi TSInclude ctermbg=NONE ctermfg=base0D cterm=NONE
+    hi TSKeyword ctermbg=NONE ctermfg=base0D cterm=NONE
+    hi TSLabel ctermbg=NONE ctermfg=base08 cterm=NONE
+    hi TSMethod ctermbg=NONE ctermfg=base0E cterm=NONE
+    hi TSNamespace ctermbg=NONE ctermfg=base07 cterm=NONE
+    hi TSOperator ctermbg=NONE ctermfg=base0A cterm=NONE
+    hi TSParameter ctermbg=NONE ctermfg=base08 cterm=NONE
+    hi TSParameterReference ctermbg=NONE ctermfg=base08 cterm=NONE
+    hi TSPunctDelimiter ctermbg=NONE ctermfg=base0E cterm=NONE
+    hi TSPunctBracket ctermbg=NONE ctermfg=base05 cterm=NONE
+    hi TSPunctSpecial ctermbg=NONE ctermfg=base06 cterm=NONE
+    hi TSString ctermbg=NONE ctermfg=base09 cterm=NONE
+    hi TSStringEscape ctermbg=NONE ctermfg=base08 cterm=NONE
+    hi TSTag ctermbg=NONE ctermfg=base0D cterm=NONE
+    hi TSTagDelimiter ctermbg=NONE ctermfg=base03 cterm=NONE
+    hi TSEmphasis ctermbg=NONE ctermfg=base05 cterm=italic
+    hi TSUnderline ctermbg=NONE ctermfg=base05 cterm=underline
+    hi TSStrike ctermbg=NONE ctermfg=base0A cterm=underline
+    hi TSMath ctermbg=NONE ctermfg=base0A cterm=NONE
+    hi TSTextReference ctermbg=NONE ctermfg=base08 cterm=NONE
+    hi TSEnvironmentName ctermbg=NONE ctermfg=base0C cterm=NONE
+    hi TSVariable ctermbg=NONE ctermfg=base0C cterm=NONE
+    hi TSVariableBuiltin ctermbg=NONE ctermfg=base0D cterm=NONE
 endif
 
 hi link EndOfBuffer NonText
@@ -150,6 +222,21 @@ hi link StatusLineTermNC StatusLineNC
 hi link WarningMsg Error
 hi link CursorIM Cursor
 hi link Terminal Normal
+hi link TSError Normal
+hi link TSFloat TSBoolean
+hi link TSFuncBuiltin TSFunction
+hi link TSFuncMacro TSFunction
+hi link TSKeywordFunction TSKeyword
+hi link TSKeywordOperator TSKeyword
+hi link TSNumber TSConstant
+hi link TSProperty TSField
+hi link TSRepeat TSConstant
+hi link TSStringRegex TSString
+hi link TSText Normal
+hi link TSTitle TSEmphasis
+hi link TSLiteral TSText
+hi link TSURI TSUnderline
+hi link TSEnvironment TSMath
 
 let g:terminal_ansi_colors = [
         \ '#2B213C',
