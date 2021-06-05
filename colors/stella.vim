@@ -2,7 +2,7 @@
 " Author:      Shreeram Modi (Shrimpram) (shreerammodi10<at><gmail>)
 " Webpage:     https://github.com/shrimpram/stella
 " Description: A regal purple theme based on my dog Stella
-" Last Change: 2021-06-01
+" Last Change: 2021-06-04
 
 hi clear
 
@@ -39,7 +39,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi CursorLineNr ctermbg=NONE ctermfg=6 cterm=NONE guibg=NONE guifg=#B4A5C8 gui=NONE
     hi helpLeadBlank ctermbg=NONE ctermfg=6 cterm=NONE guibg=NONE guifg=#B4A5C8 gui=NONE
     hi helpNormal ctermbg=NONE ctermfg=6 cterm=NONE guibg=NONE guifg=#B4A5C8 gui=NONE
-    hi Visual ctermbg=3 ctermfg=NONE cterm=NONE guibg=#655978 guifg=NONE gui=NONE
+    hi Visual ctermbg=2 ctermfg=NONE cterm=NONE guibg=#4D4160 guifg=NONE gui=NONE
     hi VisualNOS ctermbg=NONE ctermfg=12 cterm=NONE guibg=NONE guifg=#C7AB87 gui=NONE
     hi Pmenu ctermbg=1 ctermfg=4 cterm=NONE guibg=#362B48 guifg=#7F7192 gui=NONE
     hi PmenuSbar ctermbg=2 ctermfg=NONE cterm=NONE guibg=#4D4160 guifg=NONE gui=NONE
@@ -144,7 +144,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi CursorLineNr ctermbg=NONE ctermfg=base06 cterm=NONE
     hi helpLeadBlank ctermbg=NONE ctermfg=base06 cterm=NONE
     hi helpNormal ctermbg=NONE ctermfg=base06 cterm=NONE
-    hi Visual ctermbg=base03 ctermfg=NONE cterm=NONE
+    hi Visual ctermbg=base02 ctermfg=NONE cterm=NONE
     hi VisualNOS ctermbg=NONE ctermfg=base12 cterm=NONE
     hi Pmenu ctermbg=base01 ctermfg=base04 cterm=NONE
     hi PmenuSbar ctermbg=base02 ctermfg=NONE cterm=NONE
