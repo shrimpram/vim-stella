@@ -153,6 +153,9 @@ hi link EndOfBuffer NonText
 hi link Number Constant
 hi link StatusLineTerm StatusLine
 hi link StatusLineTermNC StatusLineNC
+hi link diffAdded DiffAdd
+hi link diffChanged DiffChange
+hi link diffRemoved DiffDelete
 hi link ErrorMsg Error
 hi link WarningMsg Error
 hi link CursorIM Cursor
