@@ -2,7 +2,7 @@
 " Author:      Shreeram Modi (Shrimpram) (shreerammodi10<at><gmail>)
 " Webpage:     https://github.com/shrimpram/stella
 " Description: A regal purple theme based on my dog Stella
-" Last Change: 2021-06-04
+" Last Change: 2021-06-05
 
 hi clear
 
@@ -15,9 +15,9 @@ let colors_name = "stella"
 if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi Normal ctermbg=0 ctermfg=6 cterm=NONE guibg=#2B213C guifg=#B4A5C8 gui=NONE
     hi NonText ctermbg=NONE ctermfg=3 cterm=NONE guibg=NONE guifg=#655978 gui=NONE
-    hi Comment ctermbg=NONE ctermfg=4 cterm=italic guibg=NONE guifg=#7F7192 gui=italic
     hi Constant ctermbg=NONE ctermfg=4 cterm=NONE guibg=NONE guifg=#7F7192 gui=NONE
     hi Error ctermbg=NONE ctermfg=11 cterm=NONE guibg=NONE guifg=#C79987 gui=NONE
+    hi Comment ctermbg=NONE ctermfg=3 cterm=italic guibg=NONE guifg=#655978 gui=italic
     hi Identifier ctermbg=NONE ctermfg=14 cterm=NONE guibg=NONE guifg=#ACC79B gui=NONE
     hi Ignore ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=NONE gui=NONE
     hi PreProc ctermbg=NONE ctermfg=10 cterm=NONE guibg=NONE guifg=#9BA0C7 gui=NONE
