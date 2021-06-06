@@ -20,7 +20,7 @@
 
 | Key    | Hex       | Sample                                                                         |
 |--------|-----------|--------------------------------------------------------------------------------|
-| Base00 | `#2B213C` | <img src="../images/new-base00.png?raw=true" alt="base00" width="192" height="66"> |
+| Base00 | `#2B213C` | <img src="../images/new-new-base00.png?raw=true" alt="base00" width="192" height="66"> |
 | Base01 | `#362B48` | <img src="../images/new-base01.png?raw=true" alt="base01" width="192" height="66"> |
 | Base02 | `#4D4160` | <img src="../images/new-base02.png?raw=true" alt="base02" width="192" height="66"> |
 | Base03 | `#655978` | <img src="../images/new-base03.png?raw=true" alt="base03" width="192" height="66"> |
