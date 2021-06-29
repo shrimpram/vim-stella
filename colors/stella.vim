@@ -2,7 +2,7 @@
 " Author:      Shreeram Modi (Shrimpram) (shreerammodi10<at><gmail>)
 " Webpage:     https://github.com/shrimpram/stella
 " Description: A regal purple theme based on my dog Stella
-" Last Change: 2021-06-05
+" Last Change: 2021-06-28
 
 hi clear
 
@@ -78,6 +78,14 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi TSEmphasis ctermbg=NONE ctermfg=6 cterm=italic guibg=NONE guifg=#B4A5C8 gui=italic
     hi TSUnderline ctermbg=NONE ctermfg=6 cterm=underline guibg=NONE guifg=#B4A5C8 gui=underline guisp=#B4A5C8
     hi TSStrike ctermbg=NONE ctermfg=11 cterm=underline guibg=NONE guifg=#C79987 gui=underline guisp=#C79987
+    hi NeomakeErrorSign ctermbg=NONE ctermfg=11 cterm=NONE guibg=NONE guifg=#C79987 gui=NONE
+    hi NeomakeWarningSign ctermbg=NONE ctermfg=12 cterm=NONE guibg=NONE guifg=#C7AB87 gui=NONE
+    hi NeomakeInfoSign ctermbg=NONE ctermfg=13 cterm=NONE guibg=NONE guifg=#C7C691 gui=NONE
+    hi NeomakeMessageSign ctermbg=NONE ctermfg=14 cterm=NONE guibg=NONE guifg=#ACC79B gui=NONE
+    hi NeomakeVirtualtextError ctermbg=1 ctermfg=11 cterm=NONE guibg=#362B48 guifg=#C79987 gui=NONE
+    hi NeomakeVirtualtextWarning ctermbg=1 ctermfg=12 cterm=NONE guibg=#362B48 guifg=#C7AB87 gui=NONE
+    hi NeomakeVirtualtextInfo ctermbg=1 ctermfg=13 cterm=NONE guibg=#362B48 guifg=#C7C691 gui=NONE
+    hi NeomakeVirtualtextMessage ctermbg=1 ctermfg=14 cterm=NONE guibg=#362B48 guifg=#ACC79B gui=NONE
 
 elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     set t_Co=16
@@ -147,6 +155,14 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi TSEmphasis ctermbg=NONE ctermfg=base06 cterm=italic
     hi TSUnderline ctermbg=NONE ctermfg=base06 cterm=underline
     hi TSStrike ctermbg=NONE ctermfg=base11 cterm=underline
+    hi NeomakeErrorSign ctermbg=NONE ctermfg=base11 cterm=NONE
+    hi NeomakeWarningSign ctermbg=NONE ctermfg=base12 cterm=NONE
+    hi NeomakeInfoSign ctermbg=NONE ctermfg=base13 cterm=NONE
+    hi NeomakeMessageSign ctermbg=NONE ctermfg=base14 cterm=NONE
+    hi NeomakeVirtualtextError ctermbg=base01 ctermfg=base11 cterm=NONE
+    hi NeomakeVirtualtextWarning ctermbg=base01 ctermfg=base12 cterm=NONE
+    hi NeomakeVirtualtextInfo ctermbg=base01 ctermfg=base13 cterm=NONE
+    hi NeomakeVirtualtextMessage ctermbg=base01 ctermfg=base14 cterm=NONE
 endif
 
 hi link EndOfBuffer NonText
