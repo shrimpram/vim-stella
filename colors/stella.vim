@@ -1,8 +1,8 @@
 " Stella.vim -- Vim color scheme.
 " Author:      Shreeram Modi (Shrimpram) (shreerammodi10<at><gmail>)
-" Webpage:     https://github.com/shrimpram/stella
+" Webpage:     https://github.com/shrimpram/vim-stella
 " Description: A regal purple theme based on my dog Stella
-" Last Change: 2021-06-28
+" Last Change: 2021-07-03
 
 hi clear
 
