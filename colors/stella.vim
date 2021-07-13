@@ -2,7 +2,7 @@
 " Author:      Shreeram Modi (Shrimpram) (shreerammodi10<at><gmail>)
 " Webpage:     https://github.com/shrimpram/vim-stella
 " Description: A regal purple theme based on my dog Stella
-" Last Change: 2021-07-03
+" Last Change: 2021-07-12
 
 hi clear
 
@@ -57,7 +57,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi IncSearch ctermbg=15 ctermfg=1 cterm=NONE guibg=#9BC7BF guifg=#362B48 gui=NONE
     hi Search ctermbg=12 ctermfg=1 cterm=NONE guibg=#C7AB87 guifg=#362B48 gui=NONE
     hi Directory ctermbg=NONE ctermfg=8 cterm=NONE guibg=NONE guifg=#B5ADDE gui=NONE
-    hi MatchParen ctermbg=2 ctermfg=15 cterm=NONE guibg=#4D4160 guifg=#9BC7BF gui=NONE
+    hi MatchParen ctermbg=1 ctermfg=15 cterm=NONE guibg=#362B48 guifg=#9BC7BF gui=NONE
     hi SpellBad ctermbg=NONE ctermfg=11 cterm=underline guibg=NONE guifg=#C79987 gui=underline guisp=#C79987
     hi SpellCap ctermbg=NONE ctermfg=11 cterm=underline guibg=NONE guifg=#C79987 gui=underline guisp=#C79987
     hi SpellLocal ctermbg=NONE ctermfg=11 cterm=underline guibg=NONE guifg=#C79987 gui=underline guisp=#C79987
@@ -134,7 +134,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi IncSearch ctermbg=base15 ctermfg=base01 cterm=NONE
     hi Search ctermbg=base12 ctermfg=base01 cterm=NONE
     hi Directory ctermbg=NONE ctermfg=base08 cterm=NONE
-    hi MatchParen ctermbg=base02 ctermfg=base15 cterm=NONE
+    hi MatchParen ctermbg=base01 ctermfg=base15 cterm=NONE
     hi SpellBad ctermbg=NONE ctermfg=base11 cterm=underline
     hi SpellCap ctermbg=NONE ctermfg=base11 cterm=underline
     hi SpellLocal ctermbg=NONE ctermfg=base11 cterm=underline
