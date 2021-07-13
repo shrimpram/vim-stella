@@ -86,6 +86,10 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi NeomakeVirtualtextWarning ctermbg=1 ctermfg=12 cterm=NONE guibg=#362B48 guifg=#C7AB87 gui=NONE
     hi NeomakeVirtualtextInfo ctermbg=1 ctermfg=13 cterm=NONE guibg=#362B48 guifg=#C7C691 gui=NONE
     hi NeomakeVirtualtextMessage ctermbg=1 ctermfg=14 cterm=NONE guibg=#362B48 guifg=#ACC79B gui=NONE
+    hi org_deadline_scheduled ctermbg=1 ctermfg=9 cterm=NONE guibg=#362B48 guifg=#A5AAD4 gui=NONE
+    hi OrgAgendaDeadline ctermbg=NONE ctermfg=13 cterm=NONE guibg=NONE guifg=#C7C691 gui=NONE
+    hi OrgAgendaScheduled ctermbg=NONE ctermfg=14 cterm=NONE guibg=NONE guifg=#ACC79B gui=NONE
+    hi OrgAgendaScheduledPast ctermbg=NONE ctermfg=12 cterm=NONE guibg=NONE guifg=#C7AB87 gui=NONE
 
 elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     set t_Co=16
@@ -163,6 +167,10 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi NeomakeVirtualtextWarning ctermbg=base01 ctermfg=base12 cterm=NONE
     hi NeomakeVirtualtextInfo ctermbg=base01 ctermfg=base13 cterm=NONE
     hi NeomakeVirtualtextMessage ctermbg=base01 ctermfg=base14 cterm=NONE
+    hi org_deadline_scheduled ctermbg=base01 ctermfg=base09 cterm=NONE
+    hi OrgAgendaDeadline ctermbg=NONE ctermfg=base13 cterm=NONE
+    hi OrgAgendaScheduled ctermbg=NONE ctermfg=base14 cterm=NONE
+    hi OrgAgendaScheduledPast ctermbg=NONE ctermfg=base12 cterm=NONE
 endif
 
 hi link EndOfBuffer NonText
@@ -226,6 +234,7 @@ hi link TSEnvironment Statement
 hi link TSEnvironmentName Identifier
 hi link TSVariable Identifier
 hi link TSVariableBuiltin Identifier
+hi link OrgTODO Todo
 
 let g:terminal_ansi_colors = [
         \ '#2B213C',

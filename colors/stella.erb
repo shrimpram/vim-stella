@@ -190,6 +190,7 @@
         [ "ToolbarButton", "NONE", base06, "NONE" ],
         [ "debugPC", "NONE", base08, "NONE" ],
         [ "debugBreakpoint", "NONE", base06, "NONE" ],
+
         #----------TREESITTER----------#
         [ "TSAnnotation", "Type" ],
         [ "TSAttribute", "Normal" ],
@@ -245,6 +246,7 @@
         [ "TSVariable", "Identifier" ],
         [ "TSVariableBuiltin", "Identifier" ],
         #----------END TREESITTER----------#
+
         #----------NEOMAKE----------#
         [ "NeomakeErrorSign", "NONE", base11, "NONE" ],
         [ "NeomakeWarningSign", "NONE", base12, "NONE" ],
@@ -255,6 +257,14 @@
         [ "NeomakeVirtualtextInfo", base01, base13, "NONE" ],
         [ "NeomakeVirtualtextMessage", base01, base14, "NONE" ],
         #----------END NEOMAKE----------#
+
+        #----------ORG----------#
+        [ "OrgTODO", "Todo" ],
+        [ "org_deadline_scheduled", base01, base09, "NONE" ],
+        [ "OrgAgendaDeadline", "NONE", base13, "NONE" ],
+        [ "OrgAgendaScheduled", "NONE", base14, "NONE" ],
+        [ "OrgAgendaScheduledPast", "NONE", base12, "NONE" ]
+        #----------END ORG----------#
     ]
 
     # Define the color palette used by :terminal when in GUI Vim
