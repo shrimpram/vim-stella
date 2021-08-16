@@ -235,6 +235,7 @@ hi link TSEnvironmentName Identifier
 hi link TSVariable Identifier
 hi link TSVariableBuiltin Identifier
 hi link OrgTODO Todo
+hi link Searchlight Incsearch
 
 let g:terminal_ansi_colors = [
         \ '#2B213C',
