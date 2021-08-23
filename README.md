@@ -62,4 +62,4 @@ Use whichever (neo)vim plugin manager you prefer, e.g.:
     - [Chromaletter](http://www.losttype.com/font/?name=chromaletter)
     - [Libre Baskerville](https://fonts.google.com/specimen/Libre+Baskerville)
 * Typeface used in demo screenshots:
-    - Consolas
+    - [Hasklig](https://github.com/i-tu/Hasklig/)
